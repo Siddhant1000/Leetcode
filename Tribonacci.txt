@@ -1,0 +1,18 @@
+class Solution {
+    public:
+    int tribonacci(int n) {
+        int a;
+        int firstTerm = 0, secondTerm = 1, thirdTerm = 1;
+        if(n==0)
+        return firstTerm;
+        if(n==1 || n==2)
+        return secondTerm;
+        for(int i=3; i<=n; i++){
+            a = firstTerm+secondTerm+thirdTerm;
+            firstTerm=secondTerm;
+            secondTerm=thirdTerm;
+            thirdTerm = a;
+            }
+            return a;
+        }
+};
